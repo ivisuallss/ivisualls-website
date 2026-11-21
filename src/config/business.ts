@@ -1,4 +1,4 @@
-import type { Service, Package } from '../types'
+﻿import type { Service, Package } from '../types'
 
 export const BUSINESS = {
   brand: 'i.visuallss',
@@ -38,7 +38,7 @@ export const BUSINESS = {
       '6:00 PM',
     ],
     currency: 'INR',
-    currencySymbol: '₹',
+    currencySymbol: 'â‚¹',
     priceDisclaimer:
       'Prices shown are starting prices. Final availability and deliverables are confirmed on WhatsApp.',
     customPackageNote:
@@ -55,9 +55,9 @@ export const BUSINESS = {
   },
   about: {
     intro:
-      'We are a creative videography brand specializing in instant reels, iPhone videography, and event coverage in Hyderabad. Our goal is to turn your moments into memories — beautifully and effortlessly.',
+      'We are a creative videography brand specializing in instant reels, iPhone videography, and event coverage in Hyderabad. Our goal is to turn your moments into memories â€” beautifully and effortlessly.',
     whyChoose:
-      'Premium quality, creative storytelling, and dependable delivery — tailored to your moment.',
+      'Premium quality, creative storytelling, and dependable delivery â€” tailored to your moment.',
     vision: {
       heading: 'Every Moment Deserves to Be Remembered.',
       body: `Our vision is to make creative videography simple, accessible and memorable for everyone.
@@ -108,7 +108,7 @@ We focus on capturing genuine moments, choosing creative perspectives and turnin
   },
 } as const
 
-const IMG = (file: string) => `/images/services/${file}`
+const IMG = (file: string) => `${import.meta.env.BASE_URL}images/services/${file}`
 
 export const SERVICES: Service[] = [
   {
@@ -270,7 +270,7 @@ function pkg(
     serviceId,
     name,
     priceInr,
-    priceLabel: `₹${priceInr.toLocaleString('en-IN')}`,
+    priceLabel: `â‚¹${priceInr.toLocaleString('en-IN')}`,
     duration,
     videoCount,
     deliverables,
@@ -404,7 +404,7 @@ export const PACKAGES: Package[] = [
     9999,
     'Up to 4 hours',
     'Highlight reel',
-    'Starting price — details confirmed on WhatsApp',
+    'Starting price â€” details confirmed on WhatsApp',
     [
       'Up to 4 hours',
       'Important event moments',
@@ -451,7 +451,7 @@ export const PACKAGES: Package[] = [
     'Personal Mini Shoot',
     1999,
     'Up to 60 minutes',
-    '1–2 clips',
+    '1â€“2 clips',
     'Short personal cinematic clips',
     ['Cinematic clips', 'Basic editing'],
   ),
@@ -506,3 +506,4 @@ export const PACKAGES: Package[] = [
     ['Multiple clips', 'Premium editing', 'Brand-focused delivery'],
   ),
 ]
+
