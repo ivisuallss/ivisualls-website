@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg-primary: #080808;
+  --color-bg-secondary: #151313;
+  --color-bg-card: #211c1b;
+  --color-bg-elevated: #292321;
+  --color-accent: #ff896f;
+  --color-accent-secondary: #f6a083;
+  --color-accent-highlight: #ffb28d;
+  --color-text-main: #ffffff;
+  --color-text-secondary: #c8bdb8;
+  --color-text-muted: #938783;
+  --color-border: #493a36;
+  --color-success: #36c98b;
+  --color-error: #ff6262;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-main font-sans antialiased;
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: var(--font-serif);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #ff896f 0%, #ffb28d 100%);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 8, 8, 0.35) 0%,
+      rgba(8, 8, 8, 0.75) 55%,
+      #080808 100%
+    );
+  }
+
+  .card-surface {
+    @apply bg-bg-card border border-border rounded-3xl;
+  }
+
+  .input-field {
+    @apply w-full bg-bg-secondary border border-border rounded-2xl px-4 py-3.5 text-text-main placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors;
+  }
+
+  .select-field {
+    @apply w-full bg-bg-secondary border border-border rounded-2xl px-4 py-3.5 text-text-main focus:outline-none focus:border-accent transition-colors appearance-none;
+  }
+}
